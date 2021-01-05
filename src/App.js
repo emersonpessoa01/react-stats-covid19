@@ -95,6 +95,7 @@ export default function App() {
 
 const styles ={
   title: {
-    marginLeft:"10px"
+    marginLeft:"10px",
+    color: "#c2c2c2"
   }
 }
