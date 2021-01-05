@@ -16,7 +16,7 @@
   border: 1px solid blue;
   border-radius: 5px;
   padding: 5px;
-  padding-right:5px;
+  padding-right: 5px;
 }
 .country {
   min-width: 120px;
@@ -34,12 +34,6 @@
   color: white;
   font-family: Montserrat, sans-serif;
   display: flex;
-}
-
-.flag {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
 }
 
 .title {

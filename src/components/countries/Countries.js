@@ -3,9 +3,9 @@ import Country from "./Country";
 import css from "./countries.module.css";
 
 export default function Coutries({ countries }) {
-    return (
-      <div className={`${css.border}`}>
-        <div>
+  return (
+    <div className={`${css.border}`}>
+      <div>
         <table>
           <thead>
             <tr className={`${css.countryName} ${css.flexRow}`}>
@@ -19,10 +19,9 @@ export default function Coutries({ countries }) {
           </thead>
         </table>
       </div>
-        {countries.map((country) => {
-          return <Country key={country.country} country={country} />;
-        })}
-      </div>
-    );
+      {countries.map((country) => {
+        return <Country key={country.country} country={country} />;
+      })}
+    </div>
+  );
 }
-

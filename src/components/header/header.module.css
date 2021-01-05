@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Righteous&display=swap");
-*{
+* {
   background-color: rgb(4, 21, 98);
 }
 .flexRow {
@@ -27,7 +27,7 @@
   min-width: 50px;
   margin-left: 1px;
   margin-right: 30px;
-  color:white;
+  color: white;
   align-items: center;
   font-weight: bold;
 }
@@ -41,7 +41,7 @@
   font-weight: bold;
 }
 
-.separator{
+.separator {
   min-width: 80px;
   margin-left: 1px;
   margin-right: 10px;

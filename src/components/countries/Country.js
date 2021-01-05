@@ -24,7 +24,9 @@ export default class Country extends Component {
               <td style={{ justifyContent: "center" }}>
                 {tested > 1 ? `${formatNumber(tested)}` : "NA"} |
               </td>
-              <td style={{ justifyContent: "center" }}>{recovered > 1 ? `${formatNumber(recovered)}` : "NA"}  |</td>
+              <td style={{ justifyContent: "center" }}>
+                {recovered > 1 ? `${formatNumber(recovered)}` : "NA"} |
+              </td>
               <td style={{ justifyContent: "center" }}>
                 {formatNumber(deceased)} |
               </td>
