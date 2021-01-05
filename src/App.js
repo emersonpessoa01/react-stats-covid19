@@ -80,6 +80,7 @@ export default function App() {
   return (
     <div className="container">
       <h1 className={css.title}>Stats COVID-19</h1>
+      <h7 style={styles.title}>By Emerson Pessoa</h7>
       <Header
         filter={filter}
         countryCount={filteredCountries.length}
@@ -90,4 +91,10 @@ export default function App() {
       <Countries countries={filteredCountries} />
     </div>
   );
+}
+
+const styles ={
+  title: {
+    marginLeft:"10px"
+  }
 }
