@@ -27,14 +27,7 @@ export default function App() {
       const json = await res.json();
       let formatter = currentDate;
       let allCountries = json.map(
-        ({
-          country,
-          tested,
-          infected,
-          recovered,
-          deceased,
-          
-        }) => {
+        ({ country, tested, infected, recovered, deceased }) => {
           return {
             country,
             filterCountry: country.toLowerCase(),
@@ -77,10 +70,12 @@ export default function App() {
     setFilteredInfected(filteredInfected);
   };
 
+  const { title } = styles;
+
   return (
     <div className="container">
       <h1 className={css.title}>Stats COVID-19</h1>
-      <h7 style={styles.title}>By Emerson Pessoa</h7>
+      <h7 style={title}>By Emerson Pessoa</h7>
       <Header
         filter={filter}
         countryCount={filteredCountries.length}
@@ -93,9 +88,9 @@ export default function App() {
   );
 }
 
-const styles ={
+const styles = {
   title: {
-    marginLeft:"10px",
-    color: "#c2c2c2"
-  }
-}
+    marginLeft: "10px",
+    color: "#c2c2c2",
+  },
+};
