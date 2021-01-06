@@ -17,6 +17,7 @@ export default function App() {
   const [allCountries, setAllCountries] = useState([]);
   const [filteredCountries, setFilteredCountries] = useState([]);
   const [filteredInfected, setFilteredInfected] = useState(0);
+  const [filteredDeceased, setFilteredDeceased] = useState(0);
   const [filter, setFilter] = useState("");
 
   useEffect(() => {
@@ -43,10 +44,14 @@ export default function App() {
       const filteredInfected = allCountries.reduce((accumulator, current) => {
         return accumulator + current.infected;
       }, 0);
+      const filteredDeceased = allCountries.reduce((accumulator, current) => {
+        return accumulator + current.deceased;
+      }, 0);
 
       setAllCountries(allCountries);
       setFilteredCountries(Object.assign([], allCountries));
       setFilteredInfected(filteredInfected);
+      setFilteredDeceased(filteredDeceased);
     };
     getCountries();
   }, []);
@@ -65,9 +70,18 @@ export default function App() {
       },
       0
     );
+
+    const filteredDeceased = filteredCountries.reduce(
+      (accumulator, current) => {
+        return accumulator + current.deceased;
+      },
+      0
+    );
+
     console.log(filteredCountries);
     setFilteredCountries(filteredCountries);
     setFilteredInfected(filteredInfected);
+    setFilteredDeceased(filteredDeceased);
   };
 
   const { title } = styles;
@@ -75,12 +89,13 @@ export default function App() {
   return (
     <div className="container">
       <h1 className={css.title}>Stats COVID-19</h1>
-      <h7 style={title}>By Emerson Pessoa</h7>
+      <h6 style={title}>By Emerson Pessoa</h6>
       <Header
         filter={filter}
         countryCount={filteredCountries.length}
         totalInfected={filteredInfected}
         onChangeFilter={handleChangeFilter}
+        totalDeceased={filteredDeceased}
       />
 
       <Countries countries={filteredCountries} />

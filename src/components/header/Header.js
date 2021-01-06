@@ -8,6 +8,7 @@ export default function Header({
   countryCount,
   totalInfected,
   onChangeFilter,
+  totalDeceased,
 }) {
   return (
     <div className={css.flexRow}>
@@ -27,9 +28,12 @@ export default function Header({
         <strong>{countryCount}</strong>
       </span>{" "}
       <span className={css.separator}>|</span>
-      {"  "}
       <span className={css.infected}>
         Total de infectados : <strong>{formatNumber(totalInfected)} </strong>
+      </span>
+      <span className={css.separator}>|</span>
+      <span className={css.infected}>
+        Total de falecidos : <strong>{formatNumber(totalDeceased)} </strong>
       </span>
     </div>
   );
