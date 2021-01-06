@@ -1,6 +1,6 @@
 ## COVID-19
 
-#### Essa aplicação consiste em apresentar os dados reais dos países infectados pela COVID-19,onde mostra os números de testados, infectados,recuperados e outros.
+#### Essa aplicação consiste em apresentar os dados reais dos países infectados pela COVID-19, onde mostra os números de testados, infectados,recuperados e outros.
 
  
 
